@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Poppins', sans-serif;
+}
+.bg-video-wrap{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background:url(https://i.pinimg.com/736x/d7/f9/4b/d7f94b6a60e36ff94f51d48554c43845.jpg) no-repeat center center/cover;
+}
+video{
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.7) 50%);
+    background-size:3px 3px;
+    z-index: 2;
+}
+.content{
+    text-align: center;
+    color: floralwhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    z-index: 3;
+    width: 100%;
+}
+.content h1{
+    color: #8e2497;
+    font-size:3em;
+    margin: 0%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.content h2{
+    margin: 5px 0;
+    letter-spacing:6px;
+}
+.main-btn{
+    margin: 15px 0;
+    padding:15px 50px;
+    background-color:#8e2497;
+    ;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+a.button {
+    background-color: #8e2497;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+  
+  .modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal h1 {
+    margin: 0;
+  }
+  
+  .modal p {
+    opacity: 0.7;
+    font-size: 14px;
+  }
+
+
+.modal {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	display: flex;
+	
+	animation: modal 2s 3s forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.contenido {
+	margin: auto;
+	width: 40%;
+	height: 40%;
+	background: white;
+	border-radius: 10px;
+}
+
+#cerrar {
+	display: none;
+}
+
+#cerrar + label {
+	position: fixed;
+	color: #fff;
+	font-size: 25px;
+	z-index: 50;
+	background: darkred;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	right: 150px;
+	top: 150px;
+	cursor: pointer;
+	
+	animation: modal 2s 3s forwards;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#cerrar:checked + label, #cerrar:checked ~ .modal {
+	display: none;
+}
+
+@keyframes modal {
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ 
+::selection{
+    background-color: #dd4242;
+    color: #ffffff;
+}
+ 
+/*====navigation=====================================*/
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    margin: auto;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    
+}
+.logo{
+    font-size: 2.1rem;
+    color: #8e2497;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+ 
+.menu{
+    display: flex;
+}
+.menu li a{
+    margin: 5px;
+    padding: 5px 20px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: 0.4;
+    transition: all ease 0.2s;
+}
+.menu .active{
+    opacity: 1;
+}
+ 
+.right-elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-elements a{
+    margin: 0px 10px;
+}
+.right-elements a i{
+    color: #fff;
+}
+.right-elements a:hover i{
+    color: #cf2728;
+    transition: all ease 0.2s;
+}
+.menu li a:hover{
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+ 
